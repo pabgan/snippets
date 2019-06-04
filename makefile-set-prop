@@ -11,8 +11,6 @@ val1 = TRACE, CONSOLE, ASSIA_FILE, QA_APPENDER
 
 var_status = $(shell grep -E "^$(property)[^.]" $(path)$(file) | cut -d"=" -f2)
 
-test: var_status_1
-
 var_status_0:
 	@echo ">>> Setting property to $(val0)"
 ifeq ($(var_status), $(val0))
