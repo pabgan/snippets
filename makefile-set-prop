@@ -19,8 +19,8 @@ ifeq ($(var_status), $(val0))
 	@echo "... already set"
 else
 	sed 's/^$(property)[^.=]*= *.*/$(property) = $(val0)/' $(path)$(file)
-	#ant -f /home/user/install/$(module)/build.xml restart
-	#sleep 60
+	ant -f /home/user/install/$(module)/build.xml restart
+	sleep 60
 endif
 
 var_status_1:
@@ -29,8 +29,8 @@ ifeq ($(var_status), $(val1))
 	@echo "... already set"
 else
 	sed 's/^$(property)[^.=]*= *.*/$(property) = $(val1)/' $(path)$(file)
-	#ant -f /home/user/install/$(module)/build.xml restart
-	#sleep 60
+	ant -f /home/user/install/$(module)/build.xml restart
+	sleep 60
 endif
 
 backup:
@@ -38,3 +38,5 @@ backup:
 
 restore:
 	cp $(file).original $(path)/$(file)
+	ant -f /home/user/install/$(module)/build.xml restart
+	sleep 60
