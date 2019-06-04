@@ -1,0 +1,17 @@
+#
+#                               ASSIA, Inc.
+#                     Confidential and Proprietary
+#                         ALL RIGHTS RESERVED.
+#
+#      This software is provided under license and may be used
+#      or distributed only in accordance with the terms of
+#      such license.
+#
+# History: Date        By whom     What
+#          YYYY-MM-DD  pganuza        created
+#
+# CVS version control block - do not edit manually
+#  $Author: ialmandoz $
+#  $Revision: 1.7 $
+#  $Date: 2018/07/05 07:02:54 $
+#  $Source: /cvs/dsloExpresseAdditional/tools/nightlybuild/src/main/script/customization_bouygues/run_updateproperty.py,v $
