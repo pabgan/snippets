@@ -6,11 +6,11 @@ sleep_time = 60
 path = ./tmp/
 file = log4j.properties
 property = log4j.logger.com.assia
-val0 = DEBUG, CONSOLE, ASSIA_FILE, QA_APPENDER
-val1 = TRACE, CONSOLE, ASSIA_FILE, QA_APPENDER
+val0 := DEBUG, CONSOLE, ASSIA_FILE, QA_APPENDER
+val1 := TRACE, CONSOLE, ASSIA_FILE, QA_APPENDER
 ### CONFIGURE UP HERE ######################
 
-prop_status = $(shell grep -E "^$(property)[^.]" $(path)$(file) | cut -d"=" -f2)
+prop_status = $(strip $(shell grep -E "^$(property)[^.]" $(path)$(file) | cut -d"=" -f2))
 
 prop_status_0:
 	@echo ">>> Setting property to $(val0)"
@@ -38,4 +38,3 @@ backup:
 restore:
 	cp $(file).original $(path)/$(file)
 	ant -f /home/user/install/$(module)/build.xml restart
-	sleep $(sleep_time)
