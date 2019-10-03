@@ -1,4 +1,4 @@
 ---
-author: Pablo Ganuza Vidal (<pganuza@assia-inc.com)
 title: Title
+author: Pablo Ganuza Vidal (<pganuza@assia-inc.com>)
 ---
